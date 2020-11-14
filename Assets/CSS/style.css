@@ -10,4 +10,25 @@ html {
 
 body {
   font-size: 1rem;
+  display: grid;
+  grid-template-areas:
+  'nav nav nav nav nav nav'
+  'aside aside main main main main'
+  'aside aside main main main main'
+  'aside aside main main main main'
+  ;
 }
+
+.nav {
+  grid-area: nav;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+}
+
+
