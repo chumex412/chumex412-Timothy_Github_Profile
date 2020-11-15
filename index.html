@@ -3,9 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="search" content="">
+  <meta name="description" content="">
+  <title>Timothy's Github Profile</title>
+
+  <!--------------------- Custom CSS ------------------------>
+  <link href="Assets/CSS/style.css" rel="stylesheet">
+
+  <!--------------------- Google font ----------------------->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+
+  <!--------------------- Font Awesome ---------------------->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+   integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
 </head>
 <body>
+  <nav class="nav nav--display">
+    <div class="container-fluid">
+      <div class="nav__layout">
+        <div class="nav__brand">
+          <a href="#" class="nav__brand-link">
+            <img src="Assets/Images/iconfinder_github_1220369.svg" alt="Github icon" class="nav__brand-icon">
+          </a>
+        </div>
+        <div class="nav__content">
+          <ul class="nav__main-list">
+            <li class="nav__item">
+              <input type="search" maxlength="50" placeholder="Search or jump to...">
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Pull request</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Issues</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Marketplace</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Explore</a>
+            </li>
+          </ul>
+          <ul class="nav__sub-list">
+            <li class="nav__item">
+              <a href="" class="nav__link"></a>
+            </li>
+            <li class="nav__item nav__item--dropdown">
+              <a href="#" class="nav__link nav__link--dropbtn" onclick="showDropdown()" type="button">    
+                <i class="fas fa-plus nav__icon"></i>
+                <img src="Assets/Images/arrow.png" alt="Dropdown Arrow" class="nav__icon nav__icon--auto">
+              </a>
+              <div id="myDropdown"  class="dropdown">
+                <a href="#" class="dropdown__link">New Repository</a>
+                <a href="#" class="dropdown__link">Import Repository</a>
+                <a href="#" class="dropdown__link">New Gist</a>
+                <a href="#" class="dropdown__link">New Organization</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="header">
+    <ul class="header__list">
+      <li class="header__item">
+        <a href="" class="header__link">
+          Overview
+        </a>
+      </li>
+      <li class="header__item">
+        <a href="" class="header__link">
+          Repositories
+        </a>
+      </li>
+      <li class="header__item">
+        <a href="" class="header__link">
+          Projects
+        </a>
+      </li>
+      <li class="header__item">
+        <a href="" class="header__link">
+          Packages
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <aside class="aside">
+
+  </aside>
+  <main class="main">
+    <div class="container">
+      <form action="" class="form" method="GET">
+        <div class="form__inline-group">
+          <input type="search" class="filter__input" maxlength="50" placeholder="Find a repository...">  
+        </div>
+        <div class="form__inline-group">
+          <button class="btn filter__btn-type">Type: <strong>All</strong></button>
+        </div>
+        <div class="form__inline-group">
+          <button class="btn filter__btn-language">Language: <strong>All</strong></button>
+        </div>
+        <div class="form__inline-group">
+          <button class="btn new__repobtn">New</button>
+        </div>
+      </form>
+
+      <!----------------------- Repository Section ----------------->
+      <article class="article">
+        <section class="section">
+          <!------------------- Respostory Description ------------>
+          <div class="section__description">
+            <h1 class="section__header">
+              <a href="#" class="section__header-link">CodeLyne-Law-MP</a>
+            </h1>
+            <small class="section__secondary-text">Forked from CodeLyne/CodeLyne-Law-MP</small>
+            <p class="section__text">Envato Project: Law Firm Multi Pages</p>
+            <small class="section__secondary-text">Updated 3 minutes ago</small>
+          </div>
+
+          <!-------------------Reposition star rating--------------->
+          <div class="section__rating">
+            <button class="btn section__btn">Star</button>
+          </div>
+        </section>
+        <section class="section">
+          <!------------------- Respostory Description ------------>
+          <div class="section__description">
+            <h1 class="section__header">
+              <a href="#" class="section__header-link">CodeLyne-Law-SP</a>
+            </h1>
+            <small class="section__secondary-text">Forked from CodeLyne/CodeLyne-Law-SP</small>
+            <p class="section__text">Envato Project: Law Firm Multi Pages</p>
+            <small class="section__secondary-text">Updated 11 minutes ago</small>
+          </div>
+          <!-------------------Reposition star rating--------------->
+          <div class="section__rating">
+            <button class="btn section__btn">Star</button>
+          </div>
+        </section>
+        <section class="section">
+          <!------------------- Respostory Description ------------>
+          <div class="section__description">
+            <h1 class="section__header">
+              <a href="#" class="section__header-link">The-JavaScript-Workshop</a>
+            </h1>
+            <small class="section__secondary-text">Forked from PacktWorkshop/The-JavaScript-Workshop</small>
+            <p class="section__text">A New, Interactive Approach to Learning JavaScript</p>
+            <small class="section__secondary-text"></small>
+          </div>
+
+          <!-------------------Reposition star rating--------------->
+          <div class="section__rating">
+            <button class="btn section__btn">Star</button>
+          </div>
+        </section>
+        <section class="section">
+          <!------------------- Respostory Description ------------>
+          <div class="section__description">
+            <h1 class="section__header">
+              <a href="#" class="section__header-link">CodeLyne-Law-MP</a>
+            </h1>
+            <small class="section__secondary-text"></small>
+            <p class="section__text"></p>
+            <small class="section__secondary-text"></small>
+          </div>
+          <!-------------------Reposition star rating--------------->
+          <div class="section__rating">
+            <button class="btn section__btn">Star</button>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <!------------------------- Custom Script ------------------------->
+  <script src="Assets/JavaScript/dropdown.js"></script> 
   
 </body>
 </html>
