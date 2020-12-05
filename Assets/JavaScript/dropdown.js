@@ -1,6 +1,10 @@
 // Toggle for hiding and showing
+let nav = document.querySelector('.nav');
+nav.addEventListener('click', showDropdown);
 
-function showDropdown() {
+function showDropdown(e) {
+  if (!e.target.classList.contains('nav__link--dropbtn')) return;
+  //console.log(e.target)
   document.getElementById("myDropdown").classList.toggle("show");
 }
 

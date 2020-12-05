@@ -11,6 +11,9 @@
 :root {
   --primary-bgcolor: rgb(255, 255, 255);
   --secondary-bgcolor: rgb(36, 41, 46);
+  --primary-fontcolor: rgb(3, 102, 214);
+  --dark--fontcolor: rgb(51, 51, 51);
+  --secondary-fontcolor: rgb(88, 96, 129);
 }
 
 html {
@@ -20,6 +23,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+  background-color: var(--primary-bgcolor);
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-areas:
@@ -37,10 +41,9 @@ body {
 }
 
 .container {
-  max-width: 90%;
+  max-width: 95%;
   margin: 1rem auto;
   padding: 0 1rem;
-
 }
 
 /* Navigation */
@@ -62,7 +65,7 @@ body {
 .nav__brand-icon {
   width: 100%;
   min-height: auto; 
-  background-color: #ffff;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
@@ -75,12 +78,30 @@ body {
 .nav__main-list {
   display: flex;
   align-items: center;
+  width: 50%;
 }
 
 .nav__sub-list {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.nav__input {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.nav__link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .nav__icon {
@@ -89,11 +110,16 @@ body {
 }
 
 .nav__icon--auto {
-  max-width: 100%;
   height: auto;
-  width: 10%;
+  width: 20%;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.nav__img {
+  max-width: 40%;
+  min-height: 100%;
+  border-radius: 100%;
 }
 
 .nav__item {
@@ -103,7 +129,15 @@ body {
 
 .nav__item--dropdown {
   position: relative;
-  display: inline-block;
+  text-align: center;
+  max-width: 5rem;
+  margin-left: 1rem;
+}
+
+.nav__item--width {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
 }
 
 .nav__link--dropbtn {
@@ -115,11 +149,24 @@ body {
 
 .dropdown {
   display: none;
+  text-align: left;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 100%;
+  border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1; 
+  z-index: 1;
+  left: -8rem; 
+}
+
+.dropdown:after {
+  content: " ";
+  position: absolute;
+  border: 5px solid #f1f1f1;
+  border-color: transparent transparent #f1f1f1;
+  top: -10px;
+  right: 5%;
+  z-index: 2;
 }
 
 .dropdown__link {
@@ -165,6 +212,25 @@ body {
   margin-right: 2rem;
 }
 
+.header__item:hover {
+  border-bottom: 2px solid #ddd;
+}
+
+.header__item--active {
+  border-bottom: 2px solid #f9826c;
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--dark--fontcolor);
+  font-size: 1.4rem;
+  font-weight: 500; 
+}
+
+.header__link--active {
+  font-weight: 600;
+}
+
 /* Main Layout */
 
 .form {
@@ -195,7 +261,111 @@ body {
 /* Repository Section */
 
 .section {
+  border-bottom: 1px solid #ddd;
+}
+
+.section--typo {
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
+}
+
+.section__title {
+  display: flex;
+}
+
+.section__header-link {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  letter-spacing: 0.02rem;
+  color: var(--primary-fontcolor);
+  text-decoration: none;
+}
+
+.section__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+  color: var(--secondary-fontcolor);   
+}
+
+.section__secondary-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 3.2rem;
+  color: var(--secondary-fontcolor);
+}
+
+.section__note {
+  padding: 0.1rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.section__secondary-text {
+  display: block;
+}
+
+/* Sidebar */
+
+.section--padding {
+  padding: 1.5rem 0;  
+}
+
+.section--border {
+  border-bottom: none;
+  padding: 1.5rem 0;
+}
+
+.section__get-img {
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: block;
+}
+
+.section__username {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 5.2rem;
+  color: var(--secondary-fontcolor);
+}
+
+.section__profile-btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2rem;
+  color: var(--dark--fontcolor);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; 
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section__s-media {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: var(--secondary-fontcolor);    
+}
+
+.section__org-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 3.6rem;
+  letter-spacing: 0.02rem;
+}
+
+.section__img {
+  max-width: 100%;
+  width: 100%;
+  min-height: auto;
+  border-radius: 100%;
 }

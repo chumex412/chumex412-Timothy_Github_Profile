@@ -12,7 +12,7 @@
 
   <!--------------------- Google font ----------------------->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <!--------------------- Font Awesome ---------------------->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -32,7 +32,7 @@
         <div class="nav__content">
           <ul class="nav__main-list">
             <li class="nav__item">
-              <input type="search" maxlength="50" placeholder="Search or jump to...">
+              <input type="search" maxlength="50" class="nav__input" placeholder="Search or jump to...">
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link">Pull request</a>
@@ -49,10 +49,12 @@
           </ul>
           <ul class="nav__sub-list">
             <li class="nav__item">
-              <a href="" class="nav__link"></a>
+              <a href="" class="nav__link">
+                <i class="far fa-bell"></i>
+              </a>
             </li>
             <li class="nav__item nav__item--dropdown">
-              <a href="#" class="nav__link nav__link--dropbtn" onclick="showDropdown()" type="button">    
+              <a href="#" class="nav__link nav__link--dropbtn" type="button">    
                 <i class="fas fa-plus nav__icon"></i>
                 <img src="Assets/Images/arrow.png" alt="Dropdown Arrow" class="nav__icon nav__icon--auto">
               </a>
@@ -63,8 +65,17 @@
                 <a href="#" class="dropdown__link">New Organization</a>
               </div>
             </li>
-            <li class="nav__item">
-              <a href="" class="nav__link"></a>
+            <li class="nav__item nav__item--dropdown nav__item--width">
+              <a href="#" class="nav__link nav__link--dropbtn" type="button">
+                <img src="Assets/Images/User image3.png" alt="User Image" class="nav__img">
+                <img src="Assets/Images/arrow.png" alt="Dropdown Arrow" class="nav__icon nav__icon--auto">
+              </a>
+              <div id="myDropdown"  class="dropdown">
+                <a href="#" class="dropdown__link">New Repository</a>
+                <a href="#" class="dropdown__link">Import Repository</a>
+                <a href="#" class="dropdown__link">New Gist</a>
+                <a href="#" class="dropdown__link">Sign in</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -78,8 +89,8 @@
           Overview
         </a>
       </li>
-      <li class="header__item">
-        <a href="" class="header__link">
+      <li class="header__item header__item--active">
+        <a href="" class="header__link header__link--active">
           Repositories
         </a>
       </li>
@@ -95,10 +106,6 @@
       </li>
     </ul>
   </header>
-
-  <aside class="aside">
-
-  </aside>
   <main class="main">
     <div class="container">
       <form action="" class="form" method="GET">
@@ -106,7 +113,9 @@
           <input type="search" class="filter__input" maxlength="50" placeholder="Find a repository...">  
         </div>
         <div class="form__inline-group">
-          <button class="btn filter__btn-type">Type: <strong>All</strong></button>
+          <button class="btn filter__btn-type">Type: <strong>All</strong>
+          
+          </button>
         </div>
         <div class="form__inline-group">
           <button class="btn filter__btn-language">Language: <strong>All</strong></button>
@@ -118,7 +127,7 @@
 
       <!----------------------- Repository Section ----------------->
       <article class="article">
-        <section class="section">
+        <section class="section section--typo">
           <!------------------- Respostory Description ------------>
           <div class="section__description">
             <h1 class="section__header">
@@ -129,60 +138,100 @@
             <small class="section__secondary-text">Updated 3 minutes ago</small>
           </div>
 
-          <!-------------------Reposition star rating--------------->
+          <!-------------------Repository star rating--------------->
           <div class="section__rating">
-            <button class="btn section__btn">Star</button>
+            <button class="btn section__btn">
+              <i class="far fa-star"></i>
+              <span class="section__btn-text">Star</span>
+            </button>
           </div>
         </section>
-        <section class="section">
+        <section class="section section--typo">
           <!------------------- Respostory Description ------------>
           <div class="section__description">
-            <h1 class="section__header">
+            <h2 class="section__header">
               <a href="#" class="section__header-link">CodeLyne-Law-SP</a>
-            </h1>
+            </h2>
             <small class="section__secondary-text">Forked from CodeLyne/CodeLyne-Law-SP</small>
             <p class="section__text">Envato Project: Law Firm Multi Pages</p>
             <small class="section__secondary-text">Updated 11 minutes ago</small>
           </div>
-          <!-------------------Reposition star rating--------------->
+          <!-------------------Repository star rating--------------->
           <div class="section__rating">
-            <button class="btn section__btn">Star</button>
+            <button class="btn section__btn">
+              <i class="far fa-star"></i>
+              <span class="section__btn-text">Star</span>
+            </button>
           </div>
         </section>
-        <section class="section">
+        <section class="section section--typo">
           <!------------------- Respostory Description ------------>
           <div class="section__description">
-            <h1 class="section__header">
+            <h3 class="section__header">
               <a href="#" class="section__header-link">The-JavaScript-Workshop</a>
-            </h1>
+            </h3>
             <small class="section__secondary-text">Forked from PacktWorkshop/The-JavaScript-Workshop</small>
             <p class="section__text">A New, Interactive Approach to Learning JavaScript</p>
             <small class="section__secondary-text"></small>
           </div>
 
-          <!-------------------Reposition star rating--------------->
+          <!-------------------Repository star rating--------------->
           <div class="section__rating">
-            <button class="btn section__btn">Star</button>
+            <button class="btn section__btn">
+              <i class="far fa-star"></i>
+              <span class="section__btn-text">Star</span>
+            </button>
           </div>
         </section>
-        <section class="section">
+        <section class="section section--typo">
           <!------------------- Respostory Description ------------>
           <div class="section__description">
-            <h1 class="section__header">
-              <a href="#" class="section__header-link">CodeLyne-Law-MP</a>
-            </h1>
-            <small class="section__secondary-text"></small>
-            <p class="section__text"></p>
-            <small class="section__secondary-text"></small>
+            <div class="section__title">
+              <h4 class="section__header">
+                <a href="#" class="section__header-link">Envato-Law-Firm-MP</a>
+              </h4>
+              <a class="section__note" disabled>Private</a>
+            </div>
+            <small class="section__secondary-text">Envato Project: Law Firm Multi Page</small>
+            <small class="section__secondary-text">Updated on Sept 2</small>
           </div>
-          <!-------------------Reposition star rating--------------->
+          <!-------------------Repository star rating--------------->
           <div class="section__rating">
-            <button class="btn section__btn">Star</button>
+            <button class="btn section__btn">
+              <i class="far fa-star"></i>
+              <span class="section__btn-text">Star</span>
+            </button>
           </div>
         </section>
       </article>
     </div>
   </main>
+
+  <!------------------------- Sidebar --------------------->
+
+  <aside class="aside">
+    <div class="container">
+      <section class="section section--padding ">
+        <div class="section__user-image">
+          <img src="Assets/Images/User image2.png" alt="User Image" class="section__img">
+          <button class="section__get-img"></button>
+        </div>
+
+        <div class="section__user-profile">
+          <p class="section__username">chumex412</p>
+          <button class="section__profile-btn">Edit Profile</button>
+          <small class="section__s-media">
+            3 Followers . 4 Following . 0
+          </small>
+        </div>
+      </section>
+
+      <section class="section section--border">      
+        <h5 class="section__org-name">Organizations</h5>
+        <img src="" alt="Organization logo" class="section__org-logo">
+      </section>
+    </div>
+  </aside>
   
   <!------------------------- Custom Script ------------------------->
   <script src="Assets/JavaScript/dropdown.js"></script> 
